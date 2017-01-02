@@ -1,2 +1,2 @@
-![]("./other/ANDROID.png")
-##<center>Android Related Paper##
+![android](others/ANDROID.png)
+
