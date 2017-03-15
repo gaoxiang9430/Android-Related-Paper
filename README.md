@@ -26,9 +26,9 @@ test content
 
 <h2 id="3">Crash Testing</h2>
 
-####1. [IntelliDroid(NDSS'16)](android\ apps/crash\ testing/intellidroid-targeted-input-generator-dynamic-analysis-android-malware.pdf)####
+####1. [IntelliDroid(NDSS'16)](crash\ testing/intellidroid-targeted-input-generator-dynamic-analysis-android-malware.pdf)####
 The **goal** of IntelliDroid is to generate input that specifically exercises malicious path in an application. IntelliDroid combined static and dynamic analysis. **Static phase**: To find the malicious path, they targeted **specific APIs** and generated inputs to trigger them. Firstly, they identified the event handlers that invoke the targeted APIs, and find the **call path** to those APIs within the event. Then, extract the **path constraints**. Those path constraints may depend on heap variables that are set in other event handlers. So, IntelliDroid extracted a **supporting event-chain**. **Dynamic phase**: IntelliDroid will solve the **path constraint** just before input value **injection** and inject the input into the device-framework interface that calls the event handler.
-####2. [DART: Directed Automated Random Testing](android\ apps/crash\ testing/dart-godefroid.pdf)####
+####2. [DART: Directed Automated Random Testing](crash\ testing/dart-godefroid.pdf)####
 Unit testing applies to the individual components of a software system. In practice, it is so hard and expensive to perform because it need a test driver and extral code to test function correctness, meanwhile, some software bugs depend on global field. DART first produced concolic execution.
 
 ####3. [Testing Android Apps Through Symbolic Execution](https://dl.acm.org/citation.cfm?id=2382798)####
