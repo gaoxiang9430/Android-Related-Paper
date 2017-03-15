@@ -43,19 +43,3 @@ The problems of current techniques is practical limitation, such as environment 
 <h2 id="4">Others</h2>
 <font color=#FF0000> Hard to make enforcement both secure and backwards compatible with unmodified legacy applications on Android</font>
 
-
-|Tools|	purpose	| methodology |	rely on	| evaluation|
-| :----: | ----- | ----- | :-----: | :-----: |
-|FlowDroid|	flow analysis	|static analysis|	soot|	500(google play)+1000(virusShare)|
-|dare|	retargeting to java Bytecode|	constraint solving and translate based on 9 rules |	|	1100|
-|MFFA|	Media Fuzzing Framework for Android	||	FuzzBox	||
-|Dynodroid	|Input generation	|observe-select-execute(dynamic and static analysis)|		|50 open-source apps|
-|IntelliDroid|	Targeted Input Generator|	Dynamic and static analysis|	TaintDroid 	|5|
-|Multi-Flows|	malware detection	|Analyze structure of information flow	|soot|	6214|
-|DroidSIFT|	Semantics-aware malware detection|	static analysis|	soot|	|
-|AppIntent|	extract context information for malicious behavior detection|	static analysis & dynamic analysis	|DED, soot, JPF, InstrumentationTestRunner	|1750|
-|AppContext|	extract context information and use machine learning to detect malware	|static analysis	|soot	|202+633|
-|appSealer|	automatic generation of security-related patches	|static analysis & slicing & dynamic analysis|	Soot & TaintDroid|	16|
-|Pegasus|	enforce API and permission use|	static analysis & model checking & runtime monitoring|		|152+117
-|POSTER	|separate third-party lib with trusted code	|	ARTist||
-|Reliable Third-Party Library Detection|	third party lib detection|	Signature-based detection|||
