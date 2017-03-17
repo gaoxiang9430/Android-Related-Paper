@@ -72,8 +72,8 @@ The problems of current techniques is practical limitation, such as environment 
 |AppContext|	extract context information and use machine learning to detect malware	|static analysis	|soot	|
 |TriggerScope|	detect logic bombs |	Static analysis, symbolic execution, path predicate reconstruction and minimization|
 |appSealer|	automatic generation of security-related patches	|static analysis & slicing & dynamic analysis|	Soot & TaintDroid||
-|Automated Patching|	self-healing smartphone software to avoid further crash	detection and bytecode rewriting||
+|Automated Patching|	self-healing smartphone software to avoid further crash	|detection and bytecode rewriting||
 |Reference Hijacking|	adopt enhancement on off-the-shelf devices	|||
 |Pegasus|	enforce API and permission use|	static analysis & model checking & runtime monitoring|		|
-|POSTER	|separate third-party lib with trusted code	|	ARTist||
+|POSTER	|separate third-party lib with trusted code	| |	ARTist|
 |Reliable Third-Party Library Detection|	third party lib detection|	Signature-based detection|||
