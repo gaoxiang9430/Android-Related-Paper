@@ -31,6 +31,9 @@ This paper studied two vulnerabilities rooted in an unprotected Android componen
 
 test content
 
+####3. [Toward a Framework for Detecting Privacy Policy Violation in Android Application Code(FSE'16)](https://dl.acm.org/citation.cfm?id=2884855)####
+Software developers are entrusted by end users to not only care for their data, but disclose what exactly is being collected. So this paper proposes a semi-automated framework that consistss of a policy terminology-API method map and information flow analysis to detect misalignments. Firstly, they extract the API Terminology manually, which is a map from API method to policy phrases. Secondly, extracting the privacy policy terminology of the app from related documents. Finally, detect the voilation between the privacy policy provided by the developers and real implementation.
+
 
 <h2 id="3">Crash Testing</h2>
 
