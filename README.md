@@ -11,14 +11,9 @@ ______
 
 <h2 id="1">Android Repair</h2>
 
-#### 1. [paper1]() ####
+#### 1. [FixDroid(CCS'17)](http://eprints.lancs.ac.uk/88075/1/CCS_FixDroid_CR.pdf) ####
 
-testhaloow
-
-#### 2. [paper1]() ####
-
-test content
-
+FixDroid is a plug-in of android studio, which help inexperienced developer to develop applications with less security problems (security and privacy). Many Android apps have poorly implemented security mechanisms resulting from developer who are inexperienced, distracted or overwhelmed. Android Lint has many disadvantages. This paper introduces several operators for automitically fixing android vulneribilities.
 
 
 <h2 id="2">Android Malicious Behavior Detection</h2>
@@ -37,11 +32,11 @@ Software developers are entrusted by end users to not only care for their data, 
 
 <h2 id="3">Crash Testing</h2>
 
-#### 1. [IntelliDroid(NDSS'16)](crash\ testing/intellidroid-targeted-input-generator-dynamic-analysis-android-malware.pdf) ####
+#### 1. [IntelliDroid(NDSS'16)](https://pdfs.semanticscholar.org/4861/5e390327ca5218aef018c60938f0f2dc482b.pdf) ####
 
 The **goal** of IntelliDroid is to generate input that specifically exercises malicious path in an application. IntelliDroid combined static and dynamic analysis. **Static phase**: To find the malicious path, they targeted **specific APIs** and generated inputs to trigger them. Firstly, they identified the event handlers that invoke the targeted APIs, and find the **call path** to those APIs within the event. Then, extract the **path constraints**. Those path constraints may depend on heap variables that are set in other event handlers. So, IntelliDroid extracted a **supporting event-chain**. **Dynamic phase**: IntelliDroid will solve the **path constraint** just before input value **injection** and inject the input into the device-framework interface that calls the event handler.
 
-#### 2. [DART: Directed Automated Random Testing](crash\ testing/dart-godefroid.pdf) ####
+#### 2. [DART: Directed Automated Random Testing](https://dl.acm.org/citation.cfm?id=1065036) ####
 
 Unit testing applies to the individual components of a software system. In practice, it is so hard and expensive to perform because it need a test driver and extral code to test function correctness, meanwhile, some software bugs depend on global field. DART first produced concolic execution.
 
@@ -53,6 +48,8 @@ The goal the this paper is to **symbolic executing Android program** in [JPF](ht
 
 Manual crash relication is a labor-intensive task. Automated crash reproducation techniques have been proposed in the literature. Record-reply monitor software behavior via instrumentation to collect crash information when crash happend. Such technique suffer from practival limitation (performance, privacy issues). Post-failure approaches try to replicate crashes by exploiting data after crash.
 The problems of current techniques is practical limitation, such as environment dependencies, performance overhead and so on. This paper proposed EvoCrash, a novel guided genetic algorithm(GGA). It first gived a **fitness function**, which is related to the (1)distance between executed statements and target statement, (2)distance between generated stack and the expected trace (3)whether the target exception is thrown or not. Secondly, it will make a initial population by insert at least one method of the crash is inserted in each initial test. And then **mutate or crossover** original test suite, and choose *K* fittest individuals as the tests suite in next iterations. After finite number of iterations, the **fittest test** case will be directly given to developer as starting point for crash replication and debugging.
+
+
 
 <font color=#FF0000>Edsger Dijkstra "program testing can at best show the presence of errors but never their absence"</font>
 <h2 id="4">Others</h2>
