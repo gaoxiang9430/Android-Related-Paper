@@ -20,15 +20,19 @@ FixDroid is a plug-in of android studio, which help inexperienced developer to d
 
 #### 1. [Detecting Passive Content Leak and Pollution in Android Application(NDSS'13)](https://www.internetsociety.org/sites/default/files/02_3_0.pdf) ####
 
-This paper studied two vulnerabilities rooted in an unprotected Android component. To share data with other apps, the interface of **content provider** is open by default, which provides an opportunity for other apps to access its sensitive data or modify its configuration. This paper proposed to use **static analysis** (combining CFG and DFG) to find the potential vulnerabilities. They found **2% and 1.4%** of apps they tested are susceptible to these two vulnerabilities.
+This paper studied two very simple vulnerabilities rooted in an unprotected Android component. To share data with other apps, the interface of **content provider** is open by default, which provides an opportunity for other apps to access its sensitive data or modify its configuration. This paper proposed to use **static analysis** (combining CFG and DFG) to find the potential vulnerabilities. They found **2% and 1.4%** of apps they tested are susceptible to these two vulnerabilities.
 
 #### 2. [Analyzing Inter-Application Communication in Android(MobiSys'11)](https://dl.acm.org/citation.cfm?id=2000018) ####
 
 test content
 
 #### 3. [Toward a Framework for Detecting Privacy Policy Violation in Android Application Code(FSE'16)](https://dl.acm.org/citation.cfm?id=2884855) ####
-Software developers are entrusted by end users to not only care for their data, but disclose what exactly is being collected. So this paper proposes a semi-automated framework that consistss of a policy terminology-API method map and information flow analysis to detect misalignments. Firstly, they extract the API Terminology manually, which is a map from API method to policy phrases. Secondly, extracting the privacy policy terminology of the app from related documents. Finally, detect the voilation between the privacy policy provided by the developers and real implementation.
+Software developers are entrusted by end users to not only care for their data, but disclose what exactly is being collected. So this paper proposes a semi-automated framework that consists of a policy terminology-API method map and information flow analysis to detect misalignments. Firstly, they extract the API Terminology manually, which is a map from API method to policy phrases. Secondly, extracting the privacy policy terminology of the app from related documents. Finally, detect the voilation between the privacy policy provided by the developers and real implementation.
 
+#### 3. [Contextual Policy Enforcement in Android Applications with Permission Event Graphs(DNSS'13)](https://www.cs.cornell.edu/~tmagrino/papers/ndss13-pegasus.pdf) ####
+**Problems**:The first problem is to design a language for specifying the event-driven behaviour of an Android application.The second problem is to construct an abstraction of the interaction between an Android application and the Android event system. The third problem is to check whether this abstraction satisfies a given policy. **Challenges**: (1)Model control-flow between the event system and application. (2)computing the abstraction of android event system **Solution**: (1)Defining malicious behavior using temporal logic -- general specification(like accessing GPS data) and application specific properties(defined by users)  (2)Using PEG (Permission Event Graph) to representing the abstract between Android event system, permissions and APIs in an application. The vertex is program state (represented by a set of boolean variable, e.g. RecordEnabled) and edges capture the APIs and permission used in the transition.(3)Using model checking to check whether the properties satisfy the PEG or not.
+
+**Novelty**: (1)PEG and its construction (2)Encoding user and malicious behaviors
 
 <h2 id="3">Crash Testing</h2>
 
